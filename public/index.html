@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MeetShare — P2P File Share</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="wrap">
+    <div class="card">
+      <h1>MeetShare</h1>
+      <p class="lead">Peer-to-peer file sharing — no signup, no storage. Drag & drop a file or click to choose, then copy the link and share.</p>
+
+      <div id="drop" class="drop">
+        <div id="drop-inside">
+          <strong id="status">Drop a file here or click to choose</strong>
+          <div class="small">Files are transferred directly between peers (WebRTC). Keep this page open until transfer completes.</div>
+        </div>
+        <input id="fileInput" type="file" class="hidden" />
+        <button id="chooseBtn" class="btn">Choose file</button>
+      </div>
+
+      <div id="fileInfo" class="hidden">
+        <div id="fileName" class="small"></div>
+        <button id="createBtn" class="btn">Create transfer & get link</button>
+      </div>
+
+      <div id="linkArea" class="link-area hidden">
+        <input class="url" id="shareUrl" readonly />
+        <button class="copy" id="copyBtn">Copy link</button>
+      </div>
+
+      <div id="receivedList" style="margin-top:12px"></div>
+
+      <div style="margin-top:12px;color:#666;font-size:13px">Tip: Sender must keep this page open until receiver finishes downloading.</div>
+    </div>
+  </main>
+
+<script src="app.js"></script>
+</body>
+</html>
